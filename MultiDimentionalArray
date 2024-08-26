@@ -1,0 +1,38 @@
+//Mutidimentional Arrays
+using System;
+
+public class MultiDimentionalArray {
+    
+    public int X {get; set;}
+    public int Y {get; set;}
+    
+    public string Value {get; set;}
+    
+    public MultiDimentionalArray(int x, int y, string value) {
+        X = x;
+        Y = y;
+        Value = value;
+    }
+    
+    
+    public static void Main(string[] args) {
+        
+        MultiDimentionalArray[,] grid = new MultiDimentionalArray[2, 2]{
+            { new MultiDimentionalArray(0 ,0, "A1"), new MultiDimentionalArray(0, 1, "A2") },
+            { new MultiDimentionalArray(1, 0, "B1"), new MultiDimentionalArray(1, 1, "B2") }
+            
+        };
+        
+        for(int i = 0; i < 2; i++)
+        {
+            for(int j = 0; j < 2; j++) {
+                
+               Console.WriteLine($"Cell ({grid[i, j].X}, {grid[i, j].Y}) = {grid[i, j].Value}");
+
+            }
+        }
+        
+        
+        
+    }
+}
