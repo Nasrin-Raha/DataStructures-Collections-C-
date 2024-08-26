@@ -1,0 +1,92 @@
+//Lists
+
+using System;
+using System.Collections.Generic;
+
+public class Lists {
+    
+    static List<int> numbers = new List<int>() {1, 3, 5, 4, 2, 6, 7};
+
+    public static void Main(string[] args) {
+        
+        //Part 1
+        
+        /*
+        Console.WriteLine(numbers.Count);
+        
+        numbers.Capacity = 10;
+        numbers.Add(6);
+        List<int> subList = new List<int>() {7, 8};
+        numbers.AddRange(subList);
+        numbers.Sort();
+        Console.WriteLine("The Index of 5 is: " + numbers.BinarySearch(5));
+        Console.WriteLine(numbers.Contains(3));
+        Console.WriteLine(numbers.Contains(20));
+        */
+        
+        
+        //part 2
+        /*
+        numbers.Insert(0, 9);
+        List<int> subList = new List<int>() {0, 1, 2};
+        numbers.InsertRange(1, subList);
+        foreach(int i in numbers) {
+            Console.WriteLine(i);
+        }
+        */
+        
+        
+        //Part 3
+        /*
+        numbers.Remove(3);
+        numbers.RemoveAt(0);
+        
+        numbers.RemoveRange(0, 9);
+        
+        
+        */
+        
+        //Part 4
+        /*
+        numbers.Capacity = 10;
+        Console.WriteLine("Capacity before trim: " + numbers.Capacity);
+        numbers.TrimExcess();
+        Console.WriteLine("Capacity after trim:" + numbers.Capacity);
+        */
+        
+        
+        //Part 6
+        /*
+        
+        bool areNumbersLessThan6 =  numbers.TrueForAll(x => x < 6);
+        Console.WriteLine(areNumbersLessThan6);
+        
+        */
+        
+        //Part 7
+        /*
+        numbers.Reverse();
+        foreach(int i in numbers) {
+            Console.WriteLine(i);
+        }
+        
+        
+        
+        */
+        
+        
+        //Part 8
+        
+       // numbers.ForEach(printOuttoWindow);
+        
+        //Console.WriteLine(numbers.IndexOf(3));
+       // Console.WriteLine(numbers.LastIndexOf(3));
+        
+    }
+    
+    static void printOuttoWindow(int i) {
+        Console.WriteLine(i);
+    }
+    
+    
+}
