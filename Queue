@@ -1,0 +1,26 @@
+//Queue
+
+// First in First out
+using System;
+using System.Collections.Generic;
+
+public class Queue
+{
+    
+    public static void Main(string[] args) {
+        
+        Queue<string> queue = new Queue<string>();
+        
+        queue.Enqueue("a");
+        queue.Enqueue("b");
+        queue.Enqueue("c");
+        
+        
+        Console.WriteLine(queue.Dequeue());
+        Console.WriteLine(queue.Peek());
+        
+    
+        
+        
+    }
+}
