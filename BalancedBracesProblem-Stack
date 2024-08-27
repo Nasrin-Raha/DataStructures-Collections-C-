@@ -1,0 +1,38 @@
+using System.Collections.Generic;
+using System;
+
+class BalancedStack
+{
+    public static void Main(string[] args) {
+        Console.WriteLine(isBalanced("{{[]}}"));  // Should return true
+        Console.WriteLine(isBalanced("{{{)"));    // Should return false
+    }
+
+    private static bool isBalanced(string InputString) {
+        Stack<char> stackOfBraces = new Stack<char>();
+
+        foreach(char c in InputString) {
+            if(c == '{' || c == '[' || c == '(') {
+                stackOfBraces.Push(c);
+            } else if(c == '}' || c == ']' || c == ')') {
+                if(stackOfBraces.Count == 0) {
+                    return false;  // No corresponding opening brace
+                }
+
+                char openBrace = stackOfBraces.Pop();
+                if(!IsMatchingPair
+                (openBrace, c)) {
+                    return false;
+                }
+            }
+        }
+
+        return stackOfBraces.Count == 0;  // All braces should be matched
+    }
+
+    private static bool IsMatchingPair(char openBrace, char closeBrace) {
+        return (openBrace == '{' && closeBrace == '}') ||
+               (openBrace == '[' && closeBrace == ']') ||
+               (openBrace == '(' && closeBrace == ')');
+    }
+}
