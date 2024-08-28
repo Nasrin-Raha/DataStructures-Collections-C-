@@ -1,0 +1,25 @@
+// Hashsets in C#
+using System;
+using System.Collections.Generic;
+
+class Hashsets 
+{
+    
+    public static void Main(string[] args) 
+    {
+        HashSet<string> letter1 = new HashSet<string>() {"a", "b", "c"};
+        HashSet<string> letter2 = new HashSet<string>() {"d", "e", "f", "g","a","c"};
+        
+       // letter1.UnionWith(letter2); return all letter1 and letter2
+       // letter1.IntersectWith(letter2);   return only the shared value
+       // letter1.ExceptWith(letter2);  return only the value which is not shared 
+       // letter1.SymmetricExceptWith(letter2); // return only the value which is in one of these letters 
+
+        
+        foreach(string s in letter1) {
+            
+            Console.WriteLine(s);
+        }
+        
+    }
+}
