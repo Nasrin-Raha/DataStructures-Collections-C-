@@ -1,0 +1,28 @@
+// Dictionaries in c#
+using System;
+using System.Collections.Generic;
+
+
+class Dictionaries
+{
+    public static void Main(string[] args){
+         
+         Dictionary<string, string> dictionary = new Dictionary<string, string>();
+         
+         dictionary.Add("Key1", "Value1");
+         dictionary.Add("Key2", "Value2");
+         dictionary.Add("Key3", "Value3");
+         
+         foreach(string key in dictionary.Keys)
+         {
+             Console.WriteLine(key);
+         }
+         
+         //or use value
+         foreach(string value in dictionary.Values)
+         {
+             Console.WriteLine(value);
+         }
+        
+    }
+}
