@@ -1,0 +1,29 @@
+// Sorted Sets
+
+using System;
+using System.Collections.Generic;
+
+class SortedSets
+{
+    
+    static SortedSet<int> sortedset = new SortedSet<int>(){1, 2, 3, 4, 5};
+    
+    public static void Main(string[] args){
+        
+        List<int> list = new List<int>() {6, 7 , 8};
+        sortedset.UnionWith(list);
+        sortedset.ExceptWith(list);
+        sortedset.IntersectWith(list);
+        sortedset.SymmetricExceptWith(list);
+        
+        foreach(int i in sortedset.Reverse()) {
+            Console.WriteLine(i);
+        }
+        
+        sortedset.Clear();
+        Console.WriteLine(sortedset.Count);
+        Console.WriteLine(sortedset.Max);
+        Console.WriteLine(sortedset.Min);
+    }
+    
+}Sorted
