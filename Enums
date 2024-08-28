@@ -1,0 +1,23 @@
+// Enum in C#
+using System;
+using System.Collections.Generic;
+
+
+class Enums
+{
+    enum weekday {Monday = 5, Tuesday, Wednesday, Thursday, Friday, Satuarday, Sunday};
+    
+    public static void Main(string[] args){
+        
+        foreach(string s in Enum.GetNames(typeof(weekday)))
+        {
+            Console.WriteLine(s);
+        }
+        
+        foreach(int i in Enum.GetValues(typeof(weekday)))
+        {
+            Console.WriteLine(i);
+        }
+        
+    }
+}
