@@ -1,0 +1,18 @@
+//Sorted Lists in C#
+
+using System;
+using System.Collections.Generic;
+
+class SortedLists
+{
+    static SortedList<string, int> sortedlist= new SortedList<string, int>() {{"Key1", 1}, {"Key2", 2},{"Key3", 3}};
+    
+    
+    public static void Main(string[] args){
+        
+        Console.WriteLine("Index of 1: " + sortedlist.IndexOfValue(1));
+        Console.WriteLine("Index of 3: " + sortedlist.IndexOfValue(3));
+        Console.WriteLine("Index of 2: " + sortedlist.IndexOfValue(2));
+        
+    }
+}
