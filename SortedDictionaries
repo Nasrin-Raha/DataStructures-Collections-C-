@@ -1,0 +1,26 @@
+// Sorted Dictionaries in C#
+
+using System;
+using System.Collections.Generic;
+
+
+class SortedDictionaries
+{
+    
+    static SortedDictionary<string, string> sorteddictionary = new SortedDictionary<string, string>()
+    {
+        {"Key1", "Value1"},
+        {"Key2", "Value2"},
+        {"Key3", "Value3"}};
+
+    public static void Main(string[] args)
+    {
+        sorteddictionary.Add("Key4", "Value4");
+        
+        foreach(KeyValuePair<string, string> kvp in sorteddictionary)
+        {
+            Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+        }
+    }
+    
+}
